@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="index.html"> <i class="fa-solid fa-arrow-left"></i> <a></a>
+    <title>Itinerary Planner</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+
+<div class="itinerary-planner">
+    <h2>Itinerary Planner</h2>
+    <form action="#">
+        <label for="Name">Name</label>
+        <input type="text" name="Name" id="Name" placeholder="Enter Your Name">
+
+        <label for="E-mail">E-mail</label>
+        <input type="text" name="E-mail" id="E-mail" placeholder="Enter Your Mail Id">
+
+        <label for="Phone Number">Phone Number</label>
+        <input type="text" name="Phone Number" id="Phone Number" placeholder="Enter Your Contact Details">
+
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" placeholder="Enter destination">
+        
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" name="start-date">
+        
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" name="end-date">
+        
+        <input type="range" min="5000" max="100000" value="50" class="slider" id="myRange">
+         <p><b>Budget:</b> <span id="sliderValue">50</span></p>
+
+        <label for="activities">Activities:</label>
+        <textarea id="activities" name="activities" placeholder="Enter planned activities"></textarea>
+
+        
+        <button  class="create"> submit</button>
+    </form>
+</div>
+
+</body>
+
+<script>
+    const slider = document.getElementById("myRange");
+    const output = document.getElementById("sliderValue");
+    output.innerHTML = slider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    };
+    const creates=document.getElementsByClassName('create')[0];
+    creates.addEventListener("click",()=>{
+        alert("Thank you for contacting , we will contact you soon!!");
+    })
+  </script>
+</html>
